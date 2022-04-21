@@ -1,0 +1,12 @@
+version: "3"
+services:
+  jekyll:
+    container_name: local_jekyll
+    build:
+      context: .
+    image: jekyll_image
+    volumes:
+      - ./output/:/srv/jekyll/_site
+    ports:
+      - "4000:4000"
+    tty: true
