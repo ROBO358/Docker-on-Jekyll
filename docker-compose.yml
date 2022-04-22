@@ -4,9 +4,9 @@ services:
     container_name: local_jekyll
     build:
       context: .
-    image: jekyll_image
+    image: jekyll
     volumes:
-      - ./output/:/srv/jekyll/_site
+      - ./_site:/usr/src/app/_site
     ports:
       - "4000:4000"
     tty: true
